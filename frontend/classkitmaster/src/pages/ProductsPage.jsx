@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import API from "../services/api";
 import Pagination from "../components/Layout/Pagination";
 import { useCart } from "../components/context/CartContext";
+import { useParams } from "react-router-dom";
 
 const ProductsPage = () => {
   const [products, setProducts] = useState([]);
@@ -14,6 +15,7 @@ const ProductsPage = () => {
 
   const { addToCart } = useCart();
   const perPage = 6;
+const { category: urlCategory } = useParams();
 
   // Load products from API
   const loadProducts = async () => {
@@ -36,6 +38,12 @@ const ProductsPage = () => {
   useEffect(() => {
     setPage(1);
   }, [search, category, sort]);
+
+  useEffect(() => {
+  if (urlCategory) {
+    setCategory(urlCategory);
+  }
+}, [urlCategory]);
 
   // Filter & Search
   const filtered = products.filter((p) => {
