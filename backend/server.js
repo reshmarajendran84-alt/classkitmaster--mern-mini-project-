@@ -16,6 +16,7 @@ app.get("/", (req, res) => {
   res.send("Server is running");
 });
 app.use("/api/products", productRoutes);
-app.listen(process.env.PORT || 5000, "0.0.0.0", () => {
-  console.log("Server running");
-});
+
+app.listen(process.env.PORT || 5000, () =>
+  console.log("Server running on port", process.env.PORT || 5000)
+);
