@@ -118,8 +118,7 @@ const { category: urlCategory } = useParams();
               className="border p-3 rounded shadow border-purple-700 text-purple-700"
             >
               <img
-                src={p.image ? `http://localhost:5000${p.image}` : "https://via.placeholder.com/300"}
-                className="w-full max-w-md h-80 object-cover mx-auto rounded-xl"
+src={p.image ? `${import.meta.env.VITE_API_URL}${p.image}` : "https://placehold.co/300x300"}                className="w-full max-w-md h-80 object-cover mx-auto rounded-xl"
                 alt={p.name}
               />
               <h3 className="font-bold mt-2">{p.name}</h3>

@@ -16,8 +16,11 @@ const ProductCard = () => {
 
   return (
     <div className="p-4">
-      <img src={`http://localhost:5000${product.image}`} className="h-60" />
-      <h2 className="text-xl font-bold">{product.name}</h2>
+<img
+  src={product.image ? `${import.meta.env.VITE_API_URL}${product.image}` : "https://placehold.co/300x300"}
+  className="h-60"
+  alt={product.name}
+/>      <h2 className="text-xl font-bold">{product.name}</h2>
       <p>₹{product.price}</p>
 
       <button

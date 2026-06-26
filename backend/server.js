@@ -2,14 +2,15 @@ require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
 const connectDB = require("./config/db");
-
+const path = require("path");
 const productRoutes = require("./routes/product");
 
 const app = express();
 
 app.use(cors());
 app.use(express.json());
-app.use("/uploads", express.static("uploads"));
+app.use("/uploads", express.static(path.join(__dirname, "uploads")));
+
 
 connectDB();
 app.get("/", (req, res) => {
@@ -17,6 +18,6 @@ app.get("/", (req, res) => {
 });
 app.use("/api/products", productRoutes);
 
-app.listen(process.env.PORT || 5000, () =>
+app.listen(process.env.PORT || 5005, () =>
   console.log("Server running on port", process.env.PORT || 5000)
 );

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import API from "../../services/api";
 import axios from "axios";
-
+import toast from "react-hot-toast";
 const AdminProductsPage = () => {
   const [products, setProducts] = useState([]);
   const navigate = useNavigate();
@@ -32,8 +32,8 @@ const AdminProductsPage = () => {
             <img
               src={
                 p.image
-                  ? `http://localhost:5000${p.image}`
-                  : "https://via.placeholder.com/300"
+                  ? `http://localhost:5001${p.image}`
+                  : "https://placeholder.co/300"
               }
               className="h-48 w-full object-cover rounded-xl"
             />

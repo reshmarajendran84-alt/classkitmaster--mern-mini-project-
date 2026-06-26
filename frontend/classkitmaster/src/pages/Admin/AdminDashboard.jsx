@@ -73,8 +73,8 @@ const AdminDashboard = () => {
                     <img
                       src={
                         p.image
-                          ? `http://localhost:5000${p.image}`
-                          : "https://via.placeholder.com/50"
+                          ? `http://localhost:5001${p.image}`
+                          : "https://placeholder.co/5005"
                       }
                       alt={p.name}
                       className="h-12 w-12 object-cover rounded"

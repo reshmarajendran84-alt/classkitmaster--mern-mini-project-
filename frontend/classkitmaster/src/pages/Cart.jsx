@@ -1,6 +1,6 @@
 import React from "react";
 import { useCart } from "../components/context/CartContext";
-
+import toast from "react-hot-toast";
 const Cart = () => {
   const { cart, removeFromCart } = useCart();
 
@@ -16,8 +16,7 @@ const Cart = () => {
           className="  border-purple-700 text-purple-700 border p-3 mb-4 flex items-center rounded"
         >
           <img
-            src={`http://localhost:5000${item.image}`}
-            className="w-20 h-20 rounded  border-purple-700 text-purple-700"
+src={item.image ? `${import.meta.env.VITE_API_URL}${item.image}` : "https://placehold.co/300x300"}            className="w-20 h-20 rounded  border-purple-700 text-purple-700"
           />
 
           <div className="ml-4">
