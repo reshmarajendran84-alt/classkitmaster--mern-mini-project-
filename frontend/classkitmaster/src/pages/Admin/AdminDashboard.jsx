@@ -11,7 +11,7 @@ const AdminDashboard = () => {
     try {
       setLoading(true);
       const res = await API.get("/products");
-      setProducts(res.data.items || res.data);
+      setProducts(res.data);
     } catch (err) {
       console.error(err);
     } finally {
@@ -71,11 +71,8 @@ const AdminDashboard = () => {
                   <td className="border p-2">{p.category}</td>
                   <td className="border p-2">
                     <img
-                      src={
-                        p.image
-                          ? `http://localhost:5001${p.image}`
-                          : "https://placeholder.co/5005"
-                      }
+                      src={p.image ? `${import.meta.env.VITE_API_URL}${p.image}` : "https://placehold.co/300x300"}
+
                       alt={p.name}
                       className="h-12 w-12 object-cover rounded"
                     />

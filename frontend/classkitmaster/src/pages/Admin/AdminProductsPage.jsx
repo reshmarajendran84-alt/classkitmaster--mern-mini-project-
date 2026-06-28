@@ -30,11 +30,8 @@ const AdminProductsPage = () => {
         {products.map((p) => (
           <div key={p._id} className="card">
             <img
-              src={
-                p.image
-                  ? `http://localhost:5001${p.image}`
-                  : "https://placeholder.co/300"
-              }
+              src={p.image ? `${import.meta.env.VITE_API_URL}${p.image}` : "https://placehold.co/300x300"}
+
               className="h-48 w-full object-cover rounded-xl"
             />
 
