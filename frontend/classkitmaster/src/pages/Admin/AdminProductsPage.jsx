@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import API from "../../services/api";
-import axios from "axios";
 import toast from "react-hot-toast";
 const AdminProductsPage = () => {
   const [products, setProducts] = useState([]);

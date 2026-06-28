@@ -77,7 +77,7 @@ const AdminEditProduct = () => {
           required
         />
         <input type="file" onChange={(e) => setImage(e.target.files[0])} />
-        <button className="bg-yellow-500 text-white px-4 py-2 rounded hover:bg-yellow-600">
+        <button type="submit"  className="bg-yellow-500 text-white px-4 py-2 rounded hover:bg-yellow-600">
           Update Product
         </button>
       </form>
