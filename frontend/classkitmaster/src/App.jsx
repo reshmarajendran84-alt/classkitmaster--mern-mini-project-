@@ -11,7 +11,7 @@ import Cart from "./pages/Cart";
 import ProductDetails from "./pages/ProductDetails";
 
 import AdminAddProduct from "./pages/Admin/AdminAddProduct";
-import AdminEditProduct from "./pages/Admin/AdminEditPage";
+import AdminEditProduct from "./pages/Admin/AdminEditProduct";
 import AdminDashboard from "./pages/Admin/AdminDashboard";
 
 function App() {
@@ -33,7 +33,7 @@ function App() {
         {/*adminDashBoard*/}
         <Route path="/admin" element={<AdminDashboard />} />
         <Route path="/admin/add-product" element={<AdminAddProduct />} />
-        <Route path="/admin/edit-product/:id" element={<AdminEditPage />} />
+<Route path="/admin/edit-product/:id" element={<AdminEditProduct  />} />
       </Routes>
 
       {/* Footer */}
