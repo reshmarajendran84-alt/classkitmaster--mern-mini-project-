@@ -11,7 +11,7 @@ import Cart from "./pages/Cart";
 import ProductDetails from "./pages/ProductDetails";
 
 import AdminAddProduct from "./pages/Admin/AdminAddProduct";
-import AdminEditPage from "./pages/Admin/AdminEditPage";
+import AdminEditProduct from "./pages/Admin/AdminEditPage";
 import AdminDashboard from "./pages/Admin/AdminDashboard";
 
 function App() {
